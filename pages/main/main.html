@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="main.css" />
+  <title>Онлайн обменник</title>
+</head>
+<body>
+	<div class="mainDiv">
+		<header>
+			<div class="logo"></div>
+			<div class="time">
+				<time id="time"></time>
+				<date id="date"></date>
+		    </div>
+			<div class="info"><span>как обменять</span></div>
+		</header>
+
+		<div class="course">
+			<div id="headerCourse"></div>
+			<div class="mainCourse">
+
+				<div class="valuta">
+					<div class="valuta1">Валюта</div>
+					<div class="usd">
+						<div class="usdImage"></div>
+						<div class="usdText">USD</div>
+					</div>
+					<div class="eur">
+						<div class="eurImage"></div>
+						<div class="eurText">EUR</div>
+					</div>
+					<div class="rub">
+						<div class="rubImage"></div>
+						<div class="rubText">100 RUB</div>
+					</div>
+					<div class="pln">
+						<div class="plnImage"></div>
+						<div class="plnText">10 PLN</div>
+					</div>
+				</div>
+
+				<div class="buy">
+					<div class="buyText">Покупка</div>
+					<div class="usdBuy"></div>
+					<div class="eurBuy"></div>
+					<div class="rubBuy"></div>
+					<div class="plnBuy"></div>
+					
+				</div>
+
+				<div class="sell">
+					<div class="sellText">Продажа</div>
+					<div class="usdSell"></div>
+					<div class="eurSell"></div>
+					<div class="rubSell"></div>
+					<div class="plnSell"></div>
+				</div>
+
+		    </div>
+		</div>
+		<button class="btn2"></button>
+		<div class="instrukt"></div>
+		<div class="history">
+			<button id="butHistory">Просмотреть историю</button>
+		</div>
+		<div class="system">
+			<select id="system">
+  				<option>Просмотреть статистику</option>
+  				<option>Статистика за день</option>
+  				<option>Статистика за неделю</option>
+ 				<option>Статистика за месяц</option>
+ 				<option>Статистика за год</option>
+			</select>
+			<div class="ogr">
+				<div >Ограничение на обмен</div>
+				<div class="divOgr">
+					<input type="text" name="valuta1" placeholder="Введите сумму ограничения" class="ogrInp">
+					<button id="butSave">Сохранить</button>
+			    </div>
+			</div>
+		</div>
+
+		<div class="calc">
+			<div class="calcText">Хочу обменять</div>
+			<div class="calcInp">
+				<div class="inp1">
+					<input type="text" name="valuta1" placeholder="Введите сумму" class="inpVal1" oninput="moneyConverter(this.value)" onchange="moneyConverter(this.value)">
+					<select class="vibor" id="viborVal1">
+  						<option value="BYN">BYN</option>
+  						<option value="USD">USD</option>
+ 					    <option value="EUR">EUR</option>
+ 					    <option value="RUB">RUB</option>
+ 					    <option value="PLN">PLN</option>
+ 					</select>
+				</div>
+				<div>НА</div>
+				<div class="inp2">
+					<div id="inpVal2">0</div>
+					<select class="vibor2" id="viborVal2">
+  						<option value="USD">USD</option>
+ 					    <option value="EUR">EUR</option>
+ 					    <option value="RUB">RUB</option>
+ 					    <option value="PLN">PLN</option>
+ 					    <option value="BYN">BYN</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="calcBut">
+				<form class="form1"><button class="but1">Купить</button></form>
+				<form class="form2"><button class="but2">Продать</button></form>
+			</div>
+
+		</div>
+
+	
+  <script src="main.js"></script>
+</div>
+</body>
+</html>
